@@ -7,9 +7,23 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <h1>App products</h1>
-<div>
+
+<!--<div>
   <button (click)="loadProducts()" >Load Products</button>
 </div>
+-->
+
+<h2>Navigation</h2>
+
+<nav>
+	<ul>
+		<li><a routerLink="/">Home</a></li>
+		<li><a routerLink="/products">Products</a></li>
+	</ul>
+</nav>
+
+<router-outlet></router-outlet>
+
 
 <div *ngIf="products">
   <div *ngFor="let product of products">
