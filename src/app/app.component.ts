@@ -15,12 +15,12 @@ export class AppComponent {
 
   products: any;
 
-  constructor(private productService: ProductService) 
+  constructor(private productService: ProductService)
   {
   }
 
     loadProducts(): void {
-    this.productService.getProducts().subscribe((response: any) => {
+      this.productService.getProducts().subscribe((response: any) => {
       this.products = response.products;
     });
   }
