@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { ProductService } from './product.service';
+import { ProductService } from './services/product.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
