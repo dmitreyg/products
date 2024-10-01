@@ -7,11 +7,15 @@ import { provideHttpClient } from '@angular/common/http';
 
 import { ProductService } from './services/product.service';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/auth.interceptor';
+
 export const appConfig: ApplicationConfig = {
   providers: [
 provideZoneChangeDetection({ eventCoalescing: true }),
 provideRouter(routes),
 provideHttpClient(),
-ProductService
+ProductService,
+{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
 ]
 };

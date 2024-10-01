@@ -16,10 +16,12 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('authToken');
+    //clear user object
   }
 
   setToken(token: string): void {
     localStorage.setItem('authToken', token);
+    //populate user object
   }
 
   getToken(): string | null {

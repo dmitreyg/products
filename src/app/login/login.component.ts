@@ -38,6 +38,13 @@ export class LoginComponent {
       }
     });
   }
+
+  onLogout(): void {
+    if (this.authService.getToken()) {
+      this.authService.logout();
+      this.router.navigate(['/']);
+    }
+  }
 }
 
 
